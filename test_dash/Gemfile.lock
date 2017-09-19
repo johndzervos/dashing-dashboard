@@ -29,6 +29,7 @@ GEM
     faraday (0.11.0)
       multipart-post (>= 1.2, < 3)
     hike (1.2.3)
+    htmlentities (4.3.4)
     http (2.2.2)
       addressable (~> 2.3)
       http-cookie (~> 1.0)
@@ -41,9 +42,12 @@ GEM
     json (2.1.0)
     memoizable (0.4.2)
       thread_safe (~> 0.3, >= 0.3.1)
+    mini_portile2 (2.3.0)
     multi_json (1.12.2)
     multipart-post (2.0.0)
     naught (1.1.0)
+    nokogiri (1.8.1)
+      mini_portile2 (~> 2.3.0)
     public_suffix (3.0.0)
     rack (1.5.5)
     rack-protection (1.5.3)
@@ -98,7 +102,9 @@ PLATFORMS
 
 DEPENDENCIES
   dashing
+  htmlentities
   json
+  nokogiri
   twitter (>= 5.9.0)
 
 BUNDLED WITH

@@ -1,0 +1,19 @@
+# COLOR GUIDE
+# holiday = lightgreen
+# deadline = red
+# release = pink
+# misc = white
+
+events:
+  - name: "HR tec"
+    date: "Oct 25, 2017"
+    background: "lightblue"
+  - name: "HR tec2"
+    date: "Oct 30, 2017"
+    background: "lightblue"
+  - name: "Christmas"
+    date: "Dec 25, 2017"
+    background: "red"
+  - name: "Ski trip"
+    date: "Mar 22, 2018"
+    background: "white"
