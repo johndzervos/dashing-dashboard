@@ -1,0 +1,34 @@
+<script type='text/javascript'>
+$(function() {
+  // These settings override the defaults set in application.coffee. You can do this on a per dashboard basis.
+  //Dashing.gridsterLayout('[{"col":2,"row":1},{"col":1,"row":1},{"col":3,"row":1},{"col":2,"row":2},{"col":3,"row":2},{"col":1,"row":2},{"col":5,"row":1},{"col":4,"row":2},{"col":2,"row":3}]')
+  Dashing.widget_base_dimensions = [370, 340]
+  Dashing.numColumns = 5
+});
+</script>
+
+<% content_for :title do %>My dashboard<% end %>
+<div class="gridster">
+  <ul>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-view="TwelveHourClock"></div>
+    </li>
+
+    <li data-row="1" data-col="2" data-sizex="2" data-sizey="1">
+      <div data-id="welcome" data-view="Text" data-title="Hello" data-text="This is your shiny new dashboard." data-moreinfo="Protip: You can drag the widgets around!"></div>
+    </li>
+
+    <li data-row="1" data-col="4" data-sizex="1" data-sizey="2">
+      <div data-id="server_status" data-view="ServerStatus" data-title="Server Status"></div>
+    </li>
+
+    <li data-row="2" data-col="2" data-sizex="2" data-sizey="3">
+      <div data-id="trafficmap" data-view="Trafficmap" data-title="Amstel station" data-lat="52.349082" data-long="4.920894" data-zoom="14" ></div>
+    </li>
+    <li data-row="1" data-col="1" data-sizex="3" data-sizey="2">
+      <div data-id="map" data-view="Map" data-title="Map" data-type="heat" data-color="#222222"></div>
+    </li>
+  </ul>
+  <center><div style="font-size: 12px">Try this: curl -d '{ "auth_token": "YOUR_AUTH_TOKEN", "text": "Hey, Look what I can do!" }' \http://<%=request.host%>:<%=request.port%>/widgets/welcome</div></center>
+</div>
