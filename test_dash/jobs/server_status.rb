@@ -12,9 +12,17 @@ require 'uri'
 # if the server you're checking redirects (from http to https for example) the check will
 # return false
 
-servers = [{:name=> 'server1', :url=> 'https://www.test.com', :method=> 'http'},
+servers = [{:name=> 'randstad', :url=> 'https://randstad.crunchrapps.com', :method=> 'http'},
+           {:name=> 'naspers', :url=> 'https://naspers.crunchrapps.com', :method=> 'http'},
            {:name=> 'demo', :url=> 'https://demo.crunchrapps.com', :method=> 'http'},
-           {:name=> 'demo', :url=> 'https://demo2asdfa.crunchrapps.com', :method=> 'http'},]
+           {:name=> 'randstad', :url=> 'https://randstad.crunchrapps.com', :method=> 'http'},
+           {:name=> 'randstad', :url=> 'https://randstad.crunchrapps.com', :method=> 'http'},
+           {:name=> 'randstad', :url=> 'https://randstad.crunchrapps.com', :method=> 'http'},
+           {:name=> 'randstad', :url=> 'https://randstad.crunchrapps.com', :method=> 'http'},
+           {:name=> 'randstad', :url=> 'https://randstad.crunchrapps.com', :method=> 'http'},
+           {:name=> 'randstad', :url=> 'https://randstad.crunchrapps.com', :method=> 'http'},
+           {:name=> 'randstad', :url=> 'https://randstad.crunchrapps.com', :method=> 'http'},
+           {:name=> 'randstad', :url=> 'https://randstad.crunchrapps.com', :method=> 'http'},]
 
 SCHEDULER.every '60s', :first_in => 0 do |job|
 
@@ -47,10 +55,10 @@ SCHEDULER.every '60s', :first_in => 0 do |job|
 		end
 
 		if result == 1
-			arrow = "icon-ok-sign"
+			arrow = "fa fa-check"
 			color = "green"
 		else
-			arrow = "icon-warning-sign"
+			arrow = "fa fa-times"
 			color = "red"
 		end
 
