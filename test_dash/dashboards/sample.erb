@@ -25,6 +25,10 @@ $(function() {
     </li>
 
     <li data-row="1" data-col="5" data-sizex="1" data-sizey="1">
+      <div data-id="quote" data-view="Quote"></div>
+    </li>
+
+    <li data-row="1" data-col="6" data-sizex="1" data-sizey="1">
       <div data-view="Image" data-image="/crunchr.jpg"></div>
     </li>
 
@@ -32,14 +36,28 @@ $(function() {
       <div data-id="a_timeline" data-view="Timeline" data-title="Timeline"></div>
     </li>
 
-    <li data-row="2" data-col="2" data-sizex="2" data-sizey="1">
+    <li data-row="2" data-col="2" data-sizex="2" data-sizey="2">
+      <div id="map"></div>
+      <script>
+        function initMap() {
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 13,
+            center: {lat: 52.3491079, lng: 4.9207805}
+          });
+
+          var trafficLayer = new google.maps.TrafficLayer();
+          trafficLayer.setMap(map);
+        }
+      </script>
+      <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjv57_fhhQywv9awKTEvFu9ruBFRyDIsE&callback=initMap">
+      </script>
+    </li>
+
+    <li data-row="2" data-col="4" data-sizex="2" data-sizey="1">
       <div>
         <iframe width="750" height="690" src="http://www.youtube.com/embed/videoseries?list=PLTwVRps7UE4wtkSC9dQ43_ixLB3e3f93g&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>
       </div>
-    </li>
-
-    <li data-row="2" data-col="4" data-sizex="1" data-sizey="1">
-      <div data-id="quote" data-view="Quote"></div>
     </li>
 
     <li data-row="2" data-col="5" data-sizex="1" data-sizey="2">
@@ -47,5 +65,4 @@ $(function() {
     </li>
 
   </ul>
-  <center><div style="font-size: 12px">Try this: curl -d '{ "auth_token": "YOUR_AUTH_TOKEN", "text": "Hey, Look what I can do!" }' \http://<%=request.host%>:<%=request.port%>/widgets/welcome</div></center>
 </div>

@@ -15,8 +15,8 @@ require 'uri'
 servers = [{:name=> 'randstad', :url=> 'https://randstad.crunchrapps.com', :method=> 'http'},
            {:name=> 'naspers', :url=> 'https://naspers.crunchrapps.com', :method=> 'http'},
            {:name=> 'demo', :url=> 'https://demo.crunchrapps.com', :method=> 'http'},
-           {:name=> 'randstad', :url=> 'https://randstad.crunchrapps.com', :method=> 'http'},
-           {:name=> 'randstad', :url=> 'https://randstad.crunchrapps.com', :method=> 'http'},
+           {:name=> 'tudelft', :url=> 'https://tudelft.crunchrapps.com', :method=> 'http'},
+           {:name=> 'asdf', :url=> 'https://asdf.crunchrapps.com', :method=> 'http'},
            {:name=> 'randstad', :url=> 'https://randstad.crunchrapps.com', :method=> 'http'},
            {:name=> 'randstad', :url=> 'https://randstad.crunchrapps.com', :method=> 'http'},
            {:name=> 'randstad', :url=> 'https://randstad.crunchrapps.com', :method=> 'http'},
@@ -24,7 +24,7 @@ servers = [{:name=> 'randstad', :url=> 'https://randstad.crunchrapps.com', :meth
            {:name=> 'randstad', :url=> 'https://randstad.crunchrapps.com', :method=> 'http'},
            {:name=> 'randstad', :url=> 'https://randstad.crunchrapps.com', :method=> 'http'},]
 
-SCHEDULER.every '60s', :first_in => 0 do |job|
+SCHEDULER.every '5m', :first_in => 0 do |job|
 
 	statuses = Array.new
 
