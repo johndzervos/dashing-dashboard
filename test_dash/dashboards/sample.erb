@@ -28,15 +28,17 @@ $(function() {
       <div data-view="Image" data-image="/crunchr.jpg"></div>
     </li>
 
-    <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
+    <!-- <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
       <div data-id="bbc-tech" data-view="News" data-title="bbc tech" data-interval="30"></div>
+    </li> -->
+
+    <li data-row="2" data-col="2" data-sizex="2" data-sizey="1">
+      <div>
+        <iframe width="750" height="690" src="http://www.youtube.com/embed/videoseries?list=PLTwVRps7UE4wtkSC9dQ43_ixLB3e3f93g" frameborder="0" allowfullscreen></iframe>
+      </div>
     </li>
 
-    <li data-row="2" data-col="2" data-sizex="1" data-sizey="1">
-      <div data-id="mashable" data-view="News" data-title="mashable" data-interval="30"></div>
-    </li>
-
-    <li data-row="2" data-col="4" data-sizex="1" data-sizey="2">
+    <li data-row="2" data-col="4" data-sizex="1" data-sizey="1">
       <div data-id="a_timeline" data-view="Timeline" data-title="Timeline"></div>
     </li>
 
@@ -44,13 +46,13 @@ $(function() {
       <div data-id="server_status" data-view="ServerStatus" data-title="Server Status"></div>
     </li>
 
-    <li data-row="3" data-col="1" data-sizex="1" data-sizey="1">
+    <!-- <li data-row="3" data-col="1" data-sizex="1" data-sizey="1">
       <div data-id="techcrunch" data-view="News" data-title="techcrunch" data-interval="30"></div>
     </li>
 
     <li data-row="3" data-col="2" data-sizex="1" data-sizey="1">
       <div data-id="nu" data-view="News" data-title="nu.nl" data-interval="30"></div>
-    </li>
+    </li> -->
 
   </ul>
   <center><div style="font-size: 12px">Try this: curl -d '{ "auth_token": "YOUR_AUTH_TOKEN", "text": "Hey, Look what I can do!" }' \http://<%=request.host%>:<%=request.port%>/widgets/welcome</div></center>
