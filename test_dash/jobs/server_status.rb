@@ -16,15 +16,13 @@ servers = [{:name=> 'randstad', :url=> 'https://randstad.crunchrapps.com', :meth
            {:name=> 'naspers', :url=> 'https://naspers.crunchrapps.com', :method=> 'http'},
            {:name=> 'demo', :url=> 'https://demo.crunchrapps.com', :method=> 'http'},
            {:name=> 'tudelft', :url=> 'https://tudelft.crunchrapps.com', :method=> 'http'},
-           {:name=> 'asdf', :url=> 'https://asdf.crunchrapps.com', :method=> 'http'},
-           {:name=> 'randstad', :url=> 'https://randstad.crunchrapps.com', :method=> 'http'},
-           {:name=> 'randstad', :url=> 'https://randstad.crunchrapps.com', :method=> 'http'},
-           {:name=> 'randstad', :url=> 'https://randstad.crunchrapps.com', :method=> 'http'},
-           {:name=> 'randstad', :url=> 'https://randstad.crunchrapps.com', :method=> 'http'},
+           {:name=> 'crystal', :url=> 'https://crystal.crunchrapps.com', :method=> 'http'},
+           {:name=> 'chicago', :url=> 'https://chicago.crunchrapps.com', :method=> 'http'},
+           {:name=> 'randstad', :url=> 'randstad.crunchrapps.com', :method=> 'ping'},
            {:name=> 'randstad', :url=> 'https://randstad.crunchrapps.com', :method=> 'http'},
            {:name=> 'randstad', :url=> 'https://randstad.crunchrapps.com', :method=> 'http'},]
 
-SCHEDULER.every '5m', :first_in => 0 do |job|
+SCHEDULER.every '1m', :first_in => 0 do |job|
 
 	statuses = Array.new
 
