@@ -4,13 +4,13 @@ require 'twitter'
 #### Get your twitter keys & secrets:
 #### https://dev.twitter.com/docs/auth/tokens-devtwittercom
 twitter = Twitter::REST::Client.new do |config|
-  config.consumer_key = 'YOUR_CONSUMER_KEY'
-  config.consumer_secret = 'YOUR_CONSUMER_SECRET'
-  config.access_token = 'YOUR_OAUTH_TOKEN'
-  config.access_token_secret = 'YOUR_OAUTH_SECRET'
+  config.consumer_key = '5b2JWEvSdfryi7r7CMFXLRonR'
+  config.consumer_secret = 'WXqvUkHG83PMRtyCKJJJ29WyicK39qmqEqpAKUTuBmguc6qodf'
+  config.access_token = '540187552-50M9hVJIRfysaCoeFOH41VGPZABMPHElMiynOzVf'
+  config.access_token_secret = 'Pl976pBn8gYtaNvlGmrSO9C0tXjZLoXWoPvYFOwTotrjJ'
 end
 
-search_term = URI::encode('#todayilearned')
+search_term = URI::encode('#HRTech')
 
 SCHEDULER.every '10m', :first_in => 0 do |job|
   begin
