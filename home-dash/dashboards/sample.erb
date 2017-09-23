@@ -1,0 +1,50 @@
+<script type='text/javascript'>
+$(function() {
+  // These settings override the defaults set in application.coffee. You can do this on a per dashboard basis.
+  Dashing.widget_base_dimensions = [370, 340]
+  Dashing.numColumns = 6
+});
+</script>
+
+<% content_for :title do %>Home<% end %>
+<div class="gridster">
+  <ul>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-view="Clock"></div>
+      <i class="fa fa-clock-o icon-background"></i>
+    </li>
+
+    <li data-row="1" data-col="2" data-sizex="2" data-sizey="1">
+        <div data-id="weeklyweather" data-view="WeeklyWeather"></div>
+        <i class="fa fa-cloud fa-2x icon-background"></i>
+    </li>
+
+    <li data-row="1" data-col="4" data-sizex="2" data-sizey="1">
+      <div data-id="sansimera" data-view="News" data-title="sansimera" data-interval="30"></div>
+    </li>
+
+    <li data-row="2" data-col="4" data-sizex="2" data-sizey="1">
+      <div data-id="news247" data-view="News" data-title="news247" data-interval="30"></div>
+    </li>
+
+    <li data-row="1" data-col="5" data-sizex="1" data-sizey="1">
+      <div data-id="quote" data-view="Quote"></div>
+    </li>
+
+    <li data-row="2" data-col="1" data-sizex="3" data-sizey="3">
+      <div id="map"></div>
+      <script>
+        function initMap() {
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 14,
+            center: {lat: 52.371643, lng: 4.891870}
+          });
+        }
+      </script>
+      <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjv57_fhhQywv9awKTEvFu9ruBFRyDIsE&callback=initMap">
+      </script>
+    </li>
+  </ul>
+</div>
